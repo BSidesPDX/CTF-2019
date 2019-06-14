@@ -6,21 +6,21 @@ BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSides
 
 ## Challenges
 
-|   Challenge Name      | Category  | Points | Port  |
-|-----------------------|-----------|--------|-------|
-| N/A                   | physical  | 100    | N/A   |
-| N/A                   | physical  | 200    | N/A   |
-| N/A                   | physical  | 300    | N/A   |
-| N/A                   | pwn       | 100    | N/A   |
-| N/A                   | pwn       | 300    | N/A   |
-| N/A                   | re        | 100    | N/A   |
-| N/A                   | re        | 300    | N/A   |
-| N/A                   | misc/for  | 100    | N/A   |
-| N/A                   | misc/for  | 200    | N/A   |
-| N/A                   | misc/for  | 300    | N/A   |
-| N/A                   | web       | 100    | N/A   |
-| N/A                   | web       | 200    | N/A   |
-| N/A                   | web       | 300    | N/A   |
+|   Challenge Name                      | Category  | Points | Port(s)      |
+|---------------------------------------|-----------|--------|--------------|
+| N/A                                   | physical  | 100    | N/A          |
+| N/A                                   | physical  | 200    | N/A          |
+| N/A                                   | physical  | 300    | N/A          |
+| N/A                                   | pwn       | 100    | N/A          |
+| N/A                                   | pwn       | 300    | N/A          |
+| N/A                                   | re        | 100    | N/A          |
+| N/A                                   | re        | 300    | N/A          |
+| N/A                                   | misc/for  | 100    | N/A          |
+| N/A                                   | misc/for  | 200    | N/A          |
+| N/A                                   | misc/for  | 300    | N/A          |
+| Signed, Sealed, Delivered, I'm Yours! | web       | 100    | 48323, 48324 |
+| N/A                                   | web       | 200    | N/A          |
+| N/A                                   | web       | 300    | N/A          |
 
 ## Local Deployment
 
