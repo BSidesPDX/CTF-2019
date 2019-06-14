@@ -77,7 +77,7 @@ class App extends React.Component {
     event.preventDefault();
 
     this.setJWT("");
-    this.setState({ error: "", message: "Logged Out" });
+    this.setState({ error: "", message: "Logged Out", username: "", password: "" });
   }
 
   async register(event) {
