@@ -20,6 +20,11 @@
 300 - [Challenge Name] - [Challenge Description]
 
 -- WEB --
-100 - [Challenge Name] - [Challenge Description]
+100 - Signed, Sealed, Delivered, I'm Yours! - You're presented with a register/login page. You can register
+and login to accounts. Once logged in, there's a button that says "Get Flag". If you click it, you'll get an
+error saying you're unauthorized. The solution is to modify the JWT stored in localStorage and modify the
+admin claim to be true, and change the signing algorithm to none. Since the server doesn't verify algorithm,
+it accepts the none signing algorithm, and accepts that you're an "admin". When you hit "Get Flag" with this
+crafted JWT, you get the flag.
 200 - [Challenge Name] - [Challenge Description]
 300 - [Challenge Name] - [Challenge Description]
