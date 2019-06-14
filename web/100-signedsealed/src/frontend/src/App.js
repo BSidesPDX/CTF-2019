@@ -152,7 +152,7 @@ class App extends React.Component {
               value={this.state.password}
               onChange={this.handleChange}
               name="password"
-              type="text"
+              type="password"
               placeholder="Password"
             />
             <div className="buttons">
