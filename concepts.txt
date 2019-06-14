@@ -1,0 +1,25 @@
+* = complete with solution
++ = challenge written, needs solution/writeup
+
+-- PHYSICAL --
+100 - [Challenge Name] - [Challenge Description]
+200 - [Challenge Name] - [Challenge Description]
+300 - [Challenge Name] - [Challenge Description]
+
+-- PWN --
+100 - [Challenge Name] - [Challenge Description]
+300 - [Challenge Name] - [Challenge Description]
+
+-- RE --
+100 - [Challenge Name] - [Challenge Description]
+300 - [Challenge Name] - [Challenge Description]
+
+-- MISC/FORENSICS --
+100 - [Challenge Name] - [Challenge Description]
+200 - [Challenge Name] - [Challenge Description]
+300 - [Challenge Name] - [Challenge Description]
+
+-- WEB --
+100 - [Challenge Name] - [Challenge Description]
+200 - [Challenge Name] - [Challenge Description]
+300 - [Challenge Name] - [Challenge Description]
