@@ -37,18 +37,18 @@ func main() {
 
 	router := mux.NewRouter()
 
-	router.HandleFunc("/", swaggerHandler).Methods("GET")
+	router.HandleFunc("/", swaggerHandler).Methods(http.MethodGet)
 
-	router.HandleFunc("/flag", flagHandler).Methods("GET")
-	router.HandleFunc("/authenticate", authenticateHandler).Methods("POST")
-	router.HandleFunc("/users", createUserHandler).Methods("POST")
+	router.HandleFunc("/flag", flagHandler).Methods(http.MethodGet)
+	router.HandleFunc("/authenticate", authenticateHandler).Methods(http.MethodPost)
+	router.HandleFunc("/users", createUserHandler).Methods(http.MethodPost)
 	router.HandleFunc("/users/{userId}", func(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, http.StatusText(http.StatusNotImplemented), http.StatusNotImplemented)
-	}).Methods("GET")
+	}).Methods(http.MethodGet)
 
 	c := cors.New(cors.Options{
 		AllowedOrigins: []string{"*"},
-		AllowedMethods: []string{"GET", "POST"},
+		AllowedMethods: []string{http.MethodGet, http.MethodPost},
 		AllowedHeaders: []string{"Authorization"},
 	})
 
