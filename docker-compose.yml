@@ -7,6 +7,8 @@ services:
     environment:
       - LOG_JSON=true
       - LOG_LEVEL=trace
+      - DB_PATH=signedsealed.db
+      - FLAG=BSidesPDX{5f0505ea-72d1-40c4-8451-d4a3e19e7491}
     ports:
       - 48323:8080
   100-web-frontend:

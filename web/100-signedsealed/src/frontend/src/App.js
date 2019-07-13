@@ -52,7 +52,7 @@ class App extends React.Component {
     event.preventDefault();
 
     try {
-      const resp = await fetch(`${API_URL}/authenticate`, {
+      const resp = await fetch(`${API_URL}/token`, {
         method: "POST",
         body: JSON.stringify({
           username: this.state.username,

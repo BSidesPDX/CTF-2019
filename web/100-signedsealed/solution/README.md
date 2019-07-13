@@ -1,6 +1,6 @@
 # Solution
 
-You could do all of this via the API (especially since it has an "accidentally" exposed swagger doc) or just by using the frontend.
+You could do all of this via the API or just by using the frontend.
 
 ## Register/Login
 
