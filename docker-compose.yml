@@ -17,6 +17,6 @@ services:
       args:
         API_URL: http://127.0.0.1:48323 # should point to the external address of the backend
     ports:
-      - 48324:80
+      - 48324:8080
     depends_on:
       - 100-web-backend
