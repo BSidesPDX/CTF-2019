@@ -45,6 +45,11 @@ func (e existsErr) Exists() bool {
 	return e.exists
 }
 
+// Exister returns a value that indicates whether the desired
+// resource existed or not. This can mean different things in
+// different contexts, for example in a create a true Exists()
+// might mean a conflict, but in a get a false Exists() means
+// the resource didn't exist.
 type Exister interface {
 	Exists() bool
 }

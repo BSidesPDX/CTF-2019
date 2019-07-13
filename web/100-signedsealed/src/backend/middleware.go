@@ -7,6 +7,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
+// LogMiddleware logs some information before and after requests.
 type LogMiddleware struct {
 	Next   http.Handler
 	Logger *logrus.Logger
@@ -35,6 +36,7 @@ func (l *LogMiddleware) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}).Info("finished request")
 }
 
+// CORSMiddleware sets CORS headers and intercepts OPTIONS requests.
 type CORSMiddleware struct {
 	Next           http.Handler
 	AllowedOrigin  string

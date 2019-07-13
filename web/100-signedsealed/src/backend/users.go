@@ -10,10 +10,13 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
+// UserCreator defines an interface for creating users by
+// their usernames and hashed passwords.
 type UserCreator interface {
 	CreateUser(username, hashedPassword string) error
 }
 
+// Users is used for creating new users.
 type Users struct {
 	UserCreator UserCreator
 	Logger      *logrus.Logger
@@ -74,10 +77,13 @@ func (u *Users) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusCreated)
 }
 
+// UserFetcher defines an interface for fetching information about
+// a user (their hashed password) from ther username.
 type UserFetcher interface {
 	GetUser(username string) (string, error)
 }
 
+// Token returns a JWT for a user given valid authorization.
 type Token struct {
 	UserFetcher UserFetcher
 	Logger      *logrus.Logger

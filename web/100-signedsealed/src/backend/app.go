@@ -6,6 +6,8 @@ import (
 	"strings"
 )
 
+// App is the root handler for the app. It handlers routing
+// requests to sub handlers like the flag handler.
 type App struct {
 	Flag  http.Handler
 	Token http.Handler

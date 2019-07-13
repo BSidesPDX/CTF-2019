@@ -8,6 +8,7 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
+// Flag is a handler for returning the flag given the proper authorization.
 type Flag struct {
 	Logger *logrus.Logger
 
