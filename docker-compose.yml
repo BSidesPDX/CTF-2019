@@ -1,8 +1,22 @@
-# pwn
 
-#secureshell:
-#    build: ./pwn/200-secureshell/src
-#    ports:
-#        - 7100:7100
-#    security_opt:
-#        - seccomp:unconfined
+version: '3.5'
+services:
+  100-web-backend:
+    build:
+      context: ./web/100-signedsealed/src/backend
+    environment:
+      - LOG_JSON=true
+      - LOG_LEVEL=trace
+      - DB_PATH=signedsealed.db
+      - FLAG=BSidesPDX{5f0505ea-72d1-40c4-8451-d4a3e19e7491}
+    ports:
+      - 48323:8080
+  100-web-frontend:
+    build:
+      context: ./web/100-signedsealed/src/frontend
+      args:
+        API_URL: http://127.0.0.1:48323 # should point to the external address of the backend
+    ports:
+      - 48324:8080
+    depends_on:
+      - 100-web-backend

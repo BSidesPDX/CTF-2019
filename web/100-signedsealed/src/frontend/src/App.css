@@ -1,0 +1,48 @@
+body {
+  color: #444;
+  background: #FFF;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.App form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.App input {
+  margin: 0.5em 0.2em;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+}
+
+.buttons input {
+  width: 100%;
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: thin solid black;
+  outline: none;
+  padding: 0.3em;
+}
+
+input[type="button"] {
+  border: none;
+  border: thin solid black;
+}
+
+.error {
+  color: red;
+}
