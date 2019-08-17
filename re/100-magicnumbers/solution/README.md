@@ -168,18 +168,18 @@ undefined8 main(void)
 
 The goal is to get to this part of the program to get the flag:
 ```c
-              puts("Good job!! -- 1 second while I decrypt your flag for you!");
-              local_38 = 0x3d586c6d5d714c4a;
-              local_30 = 0x63672c6b2a767460;
-              local_28 = 0x5f676e3872675b38;
-              local_20 = 0x613b6d675d766e38;
-              local_18 = 0x603c6667;
-              local_14 = 0x5c39;
-              local_12 = 0x85;
-              decrypt((EVP_PKEY_CTX *)&local_38,(uchar *)0x27,(size_t *)0x613b6d675d766e38,in,inlen)
-              ;
-              puts((char *)&local_38);
-              uVar2 = 0;
+puts("Good job!! -- 1 second while I decrypt your flag for you!");
+local_38 = 0x3d586c6d5d714c4a;
+local_30 = 0x63672c6b2a767460;
+local_28 = 0x5f676e3872675b38;
+local_20 = 0x613b6d675d766e38;
+local_18 = 0x603c6667;
+local_14 = 0x5c39;
+local_12 = 0x85;
+decrypt((EVP_PKEY_CTX *)&local_38,(uchar *)0x27,(size_t *)0x613b6d675d766e38,in,inlen)
+;
+puts((char *)&local_38);
+uVar2 = 0;
 ```
 
 But to do so, the program needs to pass through a number of `if` statements.
@@ -256,10 +256,10 @@ Now let's find the next 2 numbers.
 The next call to `scanf` is the following:
 
 ```c
-      printf("Enter Magic Number 2/3: ");
-      iVar1 = __isoc99_scanf(&DAT_0010215f,&local_40);
-      if (iVar1 == 1) {
-        if (local_40 == 0x7a69) {
+printf("Enter Magic Number 2/3: ");
+iVar1 = __isoc99_scanf(&DAT_0010215f,&local_40);
+if (iVar1 == 1) {
+  if (local_40 == 0x7a69) {
 ```
 
 So let's convert `0x7a69` to decimal.
@@ -274,10 +274,10 @@ So our next number is `31337`.
 Let's go ahead and find the last number.
 
 ```c
-          printf("Enter Magic Number 3/3: ");
-          iVar1 = __isoc99_scanf(&DAT_0010215f,&local_3c);
-          if (iVar1 == 1) {
-            if (local_3c == 0x12b9b0a1) {
+printf("Enter Magic Number 3/3: ");
+iVar1 = __isoc99_scanf(&DAT_0010215f,&local_3c);
+if (iVar1 == 1) {
+  if (local_3c == 0x12b9b0a1) {
 ```
 
 ```
