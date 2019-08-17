@@ -9,7 +9,7 @@ $ file magicnumbers
 magicnumbers: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=f69667c467d3e522a8684095219c9416eaa9874f, for GNU/Linux 3.2.0, not stripped
 ```
 
-This is a 64-bit Linux binary.  Luckily, it's not stripped, so we still have legible file names.  You can also try running `strings` on the binary to see if the flag is hardcoded in plain-text.  Unfortunately, that isn't the case here.
+This is a 64-bit Linux binary.  Luckily, it's not stripped, so we still have legible function names.  You can also try running `strings` on the binary to see if the flag is hardcoded in plain-text.  Unfortunately, that isn't the case here.
 
 ## Running the binary
 
@@ -56,7 +56,7 @@ You can perform the following steps to load the project into Ghidra
 6. Using your filemanager, click and drag the challenge binary into the Ghidra window
 7. The default options are usually good enough, click `Ok` on the pop-up.
 8. You should now see the `Import Results Summary` window pop-up, click `Ok` on this as well.
-9. Click and drag the binary in the Ghidra window to the icon of the green dragon (or right click the binary -> Open With -> CodeBrowser)
+9. Click and drag the binary in the Ghidra window to the icon of the green dragon (or `Right Click the binary -> Open With -> CodeBrowser`)
 10. You should now see a pop-up for `Analysis Options`.  The defaults are usually good, press `Analyze`.
 11. Wait for analysis to complete.
 
@@ -166,6 +166,24 @@ undefined8 main(void)
 }
 ```
 
+The goal is to get to this part of the program to get the flag:
+```c
+              puts("Good job!! -- 1 second while I decrypt your flag for you!");
+              local_38 = 0x3d586c6d5d714c4a;
+              local_30 = 0x63672c6b2a767460;
+              local_28 = 0x5f676e3872675b38;
+              local_20 = 0x613b6d675d766e38;
+              local_18 = 0x603c6667;
+              local_14 = 0x5c39;
+              local_12 = 0x85;
+              decrypt((EVP_PKEY_CTX *)&local_38,(uchar *)0x27,(size_t *)0x613b6d675d766e38,in,inlen)
+              ;
+              puts((char *)&local_38);
+              uVar2 = 0;
+```
+
+But to do so, the program needs to pass through a number of `if` statements.
+
 
 The following is executed immediately upon launching the binary:
 
@@ -194,6 +212,7 @@ On success, these functions return the number of input items successfully matche
 So let's look at the next few lines of code:
 
 ```c
+iVar1 = __isoc99_scanf(&DAT_0010215f,&local_44);
 if (iVar1 == 1) {
   if (local_44 == 0x539) {
 ```
