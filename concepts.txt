@@ -11,13 +11,10 @@
 300 - [Challenge Name] - [Challenge Description]
 
 -- RE --
-100 - Caesar Shift 2.0 - You're presented with an x86-64 Linux binary.  The binary will ask for a password
-from the user.  Once the user enters the password in, the program will "encrypt" the input, and perform a
-memcmp on the "encrypted" version of the password.  The "encryption" will be relatively simple.  It will
-iterate over the input characters, for every even character it will increment the byte by an arbitrary value.
-For every odd character, it will decrement the byte by another arbitrary value.  I will include debug symbols
-and lots of print messages.  The goal is for this challenge to be solvable by someone who is using Ghidra for
-the first time.  But it should be hard enough that it requires Ghidra or another dissassembler.
+100 - Magic Numbers - You're presented with an x86-64 Linux binary.  The binary will notify the user that
+there are 3 magic numbers they must find.  These numbers are static, hardcoded values.  After each number is
+entered, the binary will either tell the user that the number is incorrect or prompt for the next number.
+Once all 3 numbers are correctly entered, the program will "decrypt" and print out the flag.
 300 - [Challenge Name] - [Challenge Description]
 
 -- MISC/FORENSICS --
