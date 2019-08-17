@@ -11,7 +11,10 @@
 300 - [Challenge Name] - [Challenge Description]
 
 -- RE --
-100 - [Challenge Name] - [Challenge Description]
+100 - Magic Numbers - You're presented with an x86-64 Linux binary.  The binary will notify the user that
+there are 3 magic numbers they must find.  These numbers are static, hardcoded values.  After each number is
+entered, the binary will either tell the user that the number is incorrect or prompt for the next number.
+Once all 3 numbers are correctly entered, the program will "decrypt" and print out the flag.
 300 - [Challenge Name] - [Challenge Description]
 
 -- MISC/FORENSICS --
