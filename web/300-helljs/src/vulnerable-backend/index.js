@@ -36,7 +36,7 @@ client.connect(async err => {
     {
       $set: {
         username: "franklin",
-        password: "password"
+        password: "d1af9a2d-7706-42e0-ac7e-8b75c269b368"
       }
     },
     {
