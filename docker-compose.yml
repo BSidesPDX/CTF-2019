@@ -1,5 +1,4 @@
-
-version: '3.5'
+version: "3.5"
 services:
   100-web-backend:
     build:
@@ -20,3 +19,36 @@ services:
       - 48324:8080
     depends_on:
       - 100-web-backend
+  300-web-mongodb:
+    image: mongo
+  300-web-vulnerable-backend:
+    build:
+      context: ./web/300-helljs/src/vulnerable-backend
+    environment:
+      - JWT_SECRET=6330a524-2c2a-43e9-b240-651dc6d2d19c # must be the same as secure-backend!!!
+      - MONGODB_URL=mongodb://300-web-mongodb:27017
+      - MONGODB_DB_NAME=helljs
+      - PORT=8080
+    ports:
+      - 27331:8080
+    depends_on:
+      - 300-web-mongodb
+  300-web-secure-backend:
+    build:
+      context: ./web/300-helljs/src/secure-backend
+    environment:
+      - JWT_SECRET=6330a524-2c2a-43e9-b240-651dc6d2d19c # must be the same as vulnerable-backend!!!
+      - PORT=8080
+    ports:
+      - 27332:8080
+  300-web-frontend:
+    build:
+      context: ./web/300-helljs/src/frontend
+      args:
+        VULNERABLE_API_URL: http://127.0.0.1:27331 # should point to the external address of the vulnerable backend
+        SECURE_API_URL: http://127.0.0.1:27332 # should point to the external address of the secure backend
+    ports:
+      - 27330:8080
+    depends_on:
+      - 300-web-secure-backend
+      - 300-web-vulnerable-backend

@@ -2,25 +2,25 @@
 
 ## BSidesPDX
 
-BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSidesPDX/bsides-ctf-framework).  See [TTimzen's blog post](https://www.tophertimzen.com/blog/BSidesPDXCTFFramework/) for a detailed explanation of the framework, motivations, and instructions for writing challenges.
+BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSidesPDX/bsides-ctf-framework). See [TTimzen's blog post](https://www.tophertimzen.com/blog/BSidesPDXCTFFramework/) for a detailed explanation of the framework, motivations, and instructions for writing challenges.
 
 ## Challenges
 
-|   Challenge Name                      | Category  | Points | Port(s)      |
-|---------------------------------------|-----------|--------|--------------|
-| N/A                                   | physical  | 100    | N/A          |
-| N/A                                   | physical  | 200    | N/A          |
-| N/A                                   | physical  | 300    | N/A          |
-| N/A                                   | pwn       | 100    | N/A          |
-| N/A                                   | pwn       | 300    | N/A          |
-| Magic Numbers                         | re        | 100    | N/A          |
-| N/A                                   | re        | 300    | N/A          |
-| N/A                                   | misc/for  | 100    | N/A          |
-| N/A                                   | misc/for  | 200    | N/A          |
-| N/A                                   | misc/for  | 300    | N/A          |
-| Signed, Sealed, Delivered, I'm Yours! | web       | 100    | 48323, 48324 |
-| N/A                                   | web       | 200    | N/A          |
-| N/A                                   | web       | 300    | N/A          |
+| Challenge Name                        | Category | Points | Port(s)             |
+| ------------------------------------- | -------- | ------ | ------------------- |
+| N/A                                   | physical | 100    | N/A                 |
+| N/A                                   | physical | 200    | N/A                 |
+| N/A                                   | physical | 300    | N/A                 |
+| N/A                                   | pwn      | 100    | N/A                 |
+| N/A                                   | pwn      | 300    | N/A                 |
+| Magic Numbers                         | re       | 100    | N/A                 |
+| N/A                                   | re       | 300    | N/A                 |
+| N/A                                   | misc/for | 100    | N/A                 |
+| N/A                                   | misc/for | 200    | N/A                 |
+| N/A                                   | misc/for | 300    | N/A                 |
+| Signed, Sealed, Delivered, I'm Yours! | web      | 100    | 48323, 48324        |
+| N/A                                   | web      | 200    | N/A                 |
+| Hell.js                               | web      | 300    | 27330, 27331, 27332 |
 
 ## Local Deployment
 

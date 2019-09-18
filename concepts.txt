@@ -30,18 +30,16 @@ admin claim to be true, and change the signing algorithm to none. Since the serv
 it accepts the none signing algorithm, and accepts that you're an "admin". When you hit "Get Flag" with this
 crafted JWT, you get the flag.
 200 - [Challenge Name] - [Challenge Description]
-300 - MEANie - You're presented with a login page. You don't have a username/password and no SQL injection works.
-After noticing that the app is using Angular from reading the source, you realize that the title is referencing
-the MEAN stack (MongoDB, ExpressJS, Angular, Node). You end up searching around for common MongoDB vulns and
-find MongoDB injection. You pass {"$gt": ""} to the server for the username and passwords and are able to login.
-You are now greeted with a table of items that allows you to search via queries formatted like `"foo"`. You can
-also see that the browser is making requests to a different server with the endpoint `/flag`, however this server
-is always responding with 403 Forbidden. You look at your JWT and see that a claim named "get_flag" is set to false.
-You try setting the algorithm to "none" like the 100 challenge, but no dice. You move on to looking at the table
-since you're not getting anywhere. You try another MongoDB injection, but it doesn't work since the server is using
-an explicit query selector this time. Instead, since the query looks like Javascript and you think the server is
-running Node, you try a query like `res.setHeader('X-Exec', 'hello');"foo"` and see the header gets set. You craft
-queries to exfiltrate files in the working directory, including a JSON config file for the server. You read this
-file and find the JWT secret is hardcoded. Since you know the JWT is signed with HS256 from inspecting it in jwt.io
-you use the secret to sign a version of your token with the "get_flag" claim set to true and make a request to the
-other server with the flag endpoint. It returns the flag.
+300 - Hell.js - You're presented with a login page. You don't have a username/password and no SQL injection works.
+After noticing the backend responding with X-Powered-By: Express, you assume it might be using MongoDB. You end up
+searching around for common MongoDB vulns and find MongoDB injection. You pass {"$gt": ""} to the server for the
+username and password and are able to login. You are now greeted with a table of items that allows you to search
+via queries formatted like "return false;". You can also see that the browser is making requests to a different server with
+the endpoint `/flag`, however this server is always responding with 403 Forbidden. You look at your JWT and see
+that a claim named "get_flag" is set to false. You try setting the algorithm to "none" like the 100 challenge, but
+no dice. You move on to looking at the table since you're not getting anywhere. You try another MongoDB injection,
+but it doesn't work since the server is using an explicit query selector this time. Instead, since the query looks
+like Javascript and you think the server is running Node, you craft queries like this to exfiltrate the JWT secret:
+`customer.gender = JSON.stringify(process.env); return true;`. Since you know the JWT is signed with
+HS256 from inspecting it in jwt.io you use the secret to sign a version of your token with the "get_flag" claim
+set to true and make a request to the other server with the flag endpoint. It returns the flag.
