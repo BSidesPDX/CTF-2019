@@ -15,7 +15,9 @@
 there are 3 magic numbers they must find.  These numbers are static, hardcoded values.  After each number is
 entered, the binary will either tell the user that the number is incorrect or prompt for the next number.
 Once all 3 numbers are correctly entered, the program will "decrypt" and print out the flag.
-300 - [Challenge Name] - [Challenge Description]
+300 - Bad CryptXor - You're presented with an x86-64 Linux binary as well as an encrypted file.  The program used
+to encrypt the file is a pretty simple XOR cipher, however, the file is hidden behind a password-protected, custom
+cryptor.  So the user will have to unwind the cryptor or use a debugger to reveal the embedded 2nd binary.
 
 -- MISC/FORENSICS --
 100 - [Challenge Name] - [Challenge Description]
