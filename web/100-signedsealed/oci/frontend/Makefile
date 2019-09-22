@@ -1,4 +1,3 @@
-# bsidespdx2019 is the organization on dockerhub
 OCIR_URL := phx.ocir.io
 TENANCY := oke
 REGISTRY := bsidespdx2019
