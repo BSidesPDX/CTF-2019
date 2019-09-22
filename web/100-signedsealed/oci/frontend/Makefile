@@ -9,13 +9,11 @@ CONTAINER_TAG := ${OCIR_URL}/${TENANCY}/${REGISTRY}/${DOCKER_IMAGE}
 target: container push deploy serve
 
 clean: deleteDocker deleteKube
-	make -C ../src clean
 
 # Docker Configurations
 
 container:
-	export IP_ADDR=`./get_backend_ip.sh`
-	docker build --build-arg API_URL=http://$(IP_ADDR):48323 --no-cache --tag ${CONTAINER_TAG} ../../src/frontend/ 
+	docker build --build-arg API_URL=http://$(shell ./get_backend_ip.sh):48323 --no-cache --tag ${CONTAINER_TAG} ../../src/frontend/
 
 push: 
 	docker push ${CONTAINER_TAG}

@@ -9,7 +9,6 @@ CONTAINER_TAG := ${OCIR_URL}/${TENANCY}/${REGISTRY}/${DOCKER_IMAGE}
 target: container push deploy serve
 
 clean: deleteDocker deleteKube
-	make -C ../../src clean
 
 # Docker Configurations
 
