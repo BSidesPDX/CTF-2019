@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web300-secure-backend
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: web300backend-b.bsidespdxctf.party
+spec:
+  ports:
+   - port: 27332
+     targetPort: 8080
+  selector:
+    app: web300-secure-backend
+  type: LoadBalancer
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: web300-secure-backend
+spec:
+  podSelector:
+    matchLabels:
+      app: web300-secure-backend
+  ingress:
+  - ports:
+    - port: 27332
+    from: []
