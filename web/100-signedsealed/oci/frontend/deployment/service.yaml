@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: web100-frontend
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: web100.bsidespdxctf.party
 spec:
   ports:
    - port: 48324

@@ -12,7 +12,7 @@ clean: deleteDocker deleteKube
 # Docker Configurations
 
 container:
-	docker build --build-arg API_URL=http://$(shell ./get_backend_ip.sh):48323 --no-cache --tag ${CONTAINER_TAG} ../../src/frontend/
+	docker build --build-arg API_URL=http://web100backend.bsidespdxctf.party:48323 --no-cache --tag ${CONTAINER_TAG} ../../src/frontend/
 
 push: 
 	docker push ${CONTAINER_TAG}
