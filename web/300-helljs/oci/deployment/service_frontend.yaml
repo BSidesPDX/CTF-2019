@@ -1,26 +1,26 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: web100-frontend
+  name: web300-frontend
   annotations:
-    external-dns.alpha.kubernetes.io/hostname: web100.bsidespdxctf.party
+    external-dns.alpha.kubernetes.io/hostname: web300.bsidespdxctf.party
 spec:
   ports:
-   - port: 48324
+   - port: 27330
      targetPort: 8080
   selector:
-    app: web100-frontend
+    app: web300-frontend
   type: LoadBalancer
 ---
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: web100-frontend
+  name: web300-frontend
 spec:
   podSelector:
     matchLabels:
-      app: web100-frontend
+      app: web300-frontend
   ingress:
   - ports:
-    - port: 48324
+    - port: 27330
     from: []
