@@ -32,19 +32,23 @@ deleteDocker:
 # Kubernetes
 
 deploy:
+	cat deployment/deploy_mongodb.yaml | kubectl create --namespace bsidespdxctf  -f -
 	cat deployment/deploy_vulnerable_backend.yaml | kubectl create --namespace bsidespdxctf  -f -
 	cat deployment/deploy_secure_backend.yaml | kubectl create --namespace bsidespdxctf  -f -
 	cat deployment/deploy_frontend.yaml | kubectl create --namespace bsidespdxctf  -f -
 
 serve:
+	kubectl create --namespace bsidespdxctf -f deployment/service_mongodb.yaml
 	kubectl create --namespace bsidespdxctf -f deployment/service_vulnerable_backend.yaml
 	kubectl create --namespace bsidespdxctf -f deployment/service_secure_backend.yaml
 	kubectl create --namespace bsidespdxctf -f deployment/service_frontend.yaml
 
 deleteKube:
+	cat deployment/deploy_mongodb.yaml | kubectl delete --namespace bsidespdxctf -f -
 	cat deployment/deploy_vulnerable_backend.yaml | kubectl delete --namespace bsidespdxctf -f -
 	cat deployment/deploy_secure_backend.yaml | kubectl delete --namespace bsidespdxctf -f -
 	cat deployment/deploy_frontend.yaml | kubectl delete --namespace bsidespdxctf -f -
+	kubectl delete --namespace  bsidespdxctf -f deployment/service_mongodb.yaml
 	kubectl delete --namespace  bsidespdxctf -f deployment/service_vulnerable_backend.yaml
 	kubectl delete --namespace  bsidespdxctf -f deployment/service_secure_backend.yaml
 	kubectl delete --namespace  bsidespdxctf -f deployment/service_frontend.yaml

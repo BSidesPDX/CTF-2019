@@ -22,7 +22,7 @@ spec:
           - name: JWT_SECRET
             value: "6330a524-2c2a-43e9-b240-651dc6d2d19c"
           - name: MONGODB_URL
-            value: "mongodb://300-web-mongodb:27017"
+            value: "mongodb://mongo.bsidespdxctf:27017"
           - name: MONGODB_DB_NAME
             value: "helljs"
           - name: PORT
