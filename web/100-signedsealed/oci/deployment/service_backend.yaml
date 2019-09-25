@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web100-backend
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: web100backend.bsidespdxctf.party
+spec:
+  ports:
+   - port: 48323
+     targetPort: 8080
+  selector:
+    app: web100-backend
+  type: LoadBalancer
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: web100-backend
+spec:
+  podSelector:
+    matchLabels:
+      app: web100-backend
+  ingress:
+  - ports:
+    - port: 48323
+    from: []
