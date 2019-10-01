@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: web300-secure-backend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: web300-secure-backend
+      labels:
+        app: web300-secure-backend
+    spec:
+      containers:
+        - name: web300-secure-backend
+          image: phx.ocir.io/oke/bsidespdx2019/web300_secure_backend:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+          - containerPort: 8080
+          env:
+          - name: JWT_SECRET
+            value: "6330a524-2c2a-43e9-b240-651dc6d2d19c"
+          - name: PORT
+            value: "8080"
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret

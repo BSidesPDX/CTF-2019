@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: web300-frontend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: web300-frontend
+      labels:
+        app: web300-frontend
+    spec:
+      containers:
+        - name: web300-frontend
+          image: phx.ocir.io/oke/bsidespdx2019/web300_frontend:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+          - containerPort: 8080
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret
