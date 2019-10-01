@@ -1,9 +1,13 @@
-apiVersion: extensions/v1beta1
-kind: Deployment
+apiVersion: apps/v1
+kind: StatefulSet
 metadata:
   name: mongo
 spec:
+  serviceName: mongo
   replicas: 1
+  selector:
+    matchLabels:
+      app: mongo
   template:
     metadata:
       name: mongo
