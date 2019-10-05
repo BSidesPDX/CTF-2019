@@ -11,7 +11,7 @@ def zip_walk(fname_in):
     zipfname = './tmp/data.zip'
     shutil.copyfile(fname_in, zipfname)
 
-    outter_data = ''
+    outer_data = ''
     while True:
         # check if zipfile
         if not zipfile.is_zipfile(zipfname):
@@ -19,13 +19,13 @@ def zip_walk(fname_in):
                 inner_data = f.read()
 
             shutil.rmtree('./tmp')
-            return (outter_data, inner_data)
+            return (outer_data, inner_data)
 
         with zipfile.ZipFile(zipfname, 'r') as zip_file:
             data_found = False
             for name in zip_file.namelist():
                 if name[:2] == '0x':
-                    outter_data += chr(eval(name))
+                    outer_data += chr(eval(name))
                 elif name == 'data':
                     data_found = True
 
@@ -37,11 +37,11 @@ def zip_walk(fname_in):
         # move data -> data.zip
         os.rename('./tmp/data', zipfname)
 
-def main(fname_in, outter_out_fname, inner_out_fname):
-    outter_data, inner_data = zip_walk(fname_in)
+def main(fname_in, outer_out_fname, inner_out_fname):
+    outer_data, inner_data = zip_walk(fname_in)
 
-    with open(outter_out_fname, 'wb') as f:
-        f.write(outter_data)
+    with open(outer_out_fname, 'wb') as f:
+        f.write(outer_data)
     with open(inner_out_fname, 'wb') as f:
         f.write(inner_data)
     print('Done!')
@@ -49,8 +49,8 @@ def main(fname_in, outter_out_fname, inner_out_fname):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("matryoshka_fname", help="Matryoshka Zip Filename")
-    parser.add_argument("outter_output_fname", help="Filename to write 'outter' file contents")
+    parser.add_argument("outer_output_fname", help="Filename to write 'outer' file contents")
     parser.add_argument("inner_output_fname", help="Filename to write 'inner' file contents")
     args = parser.parse_args()
 
-    main(args.matryoshka_fname, args.outter_output_fname, args.inner_output_fname)
+    main(args.matryoshka_fname, args.outer_output_fname, args.inner_output_fname)
