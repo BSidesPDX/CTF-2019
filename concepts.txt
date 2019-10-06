@@ -29,7 +29,16 @@ error saying you're unauthorized. The solution is to modify the JWT stored in lo
 admin claim to be true, and change the signing algorithm to none. Since the server doesn't verify algorithm,
 it accepts the none signing algorithm, and accepts that you're an "admin". When you hit "Get Flag" with this
 crafted JWT, you get the flag.
-200 - [Challenge Name] - [Challenge Description]
+200 - Yours truly - In this challenge there is no frontend at all. Instead, all that's given is the 
+path to an OpenAPI document on a backend. This doc outlines an API for a service that returns Hackers 
+characters, paths to images, and presigned URLs to those paths. You notice in the OpenAPI document 
+that there's a commented out portion for a header called X-Debug-Characters. You expose an nginx 
+server to the internet and pass it's URL in that header. You see a GET /users request, so you 
+configure nginx to respond with a JSON blob that looks similar to the original backend response but 
+with just the paths and names (no presigned URLs). You now see the backend is presigning whatever 
+paths your server returns. You look again in the OpenAPI documentation and see a default value for the 
+path in the response of a random UUID. You try returning this path from your fake server, and get a 
+presigned URL for it. You go to the URL and an image containing the flag is returned.
 300 - Hell.js - You're presented with a login page. You don't have a username/password and no SQL injection works.
 After noticing the backend responding with X-Powered-By: Express, you assume it might be using MongoDB. You end up
 searching around for common MongoDB vulns and find MongoDB injection. You pass {"$gt": ""} to the server for the
