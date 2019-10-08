@@ -19,7 +19,7 @@ BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSides
 | N/A                                   | misc/for | 200    | N/A                 |
 | N/A                                   | misc/for | 300    | N/A                 |
 | Signed, Sealed, Delivered, I'm Yours! | web      | 100    | 48323, 48324        |
-| N/A                                   | web      | 200    | N/A                 |
+| Yours truly                           | web      | 200    | 25400               |
 | Hell.js                               | web      | 300    | 27330, 27331, 27332 |
 
 ## Local Deployment
@@ -27,11 +27,11 @@ BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSides
 To locally test, deploy or play challenges with Docker, run the following (Ubuntu)
 
 1. `sudo apt install gcc-multilib gcc-mipsel-linux-gnu gcc-arm-linux-gnueabi g++-multilib linux-libc-dev:i386`
-1. `make`
-1. `docker-compose build && docker-compose up -d`
-1. Containers are viewable at localhost:PORT (view with docker-compose ps)
-1. `docker-compose kill` to stop the containers
-1. `make clean` to clean the source folders
+2. `make`
+3. `docker-compose build && docker-compose up -d`
+4. Containers are viewable at localhost:PORT (view with docker-compose ps)
+5. `docker-compose kill` to stop the containers
+6. `make clean` to clean the source folders
 
 ## Cloud Deployment
 
