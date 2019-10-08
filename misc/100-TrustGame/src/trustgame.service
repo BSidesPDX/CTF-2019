@@ -1,0 +1,15 @@
+[Unit]
+Description=Misc100 - Trust Game
+After=network.target
+
+[Service]
+StartLimitIntervalSec=0[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=challenge
+WorkingDirectory=/opt/trustgame/
+ExecStart=/usr/bin/env python2 /opt/trustgame/server.py
+
+[Install]
+WantedBy=multi-user.target
