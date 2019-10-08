@@ -17,7 +17,7 @@ BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSides
 | N/A                                   | re       | 300    | N/A                 |
 | N/A                                   | misc/for | 100    | N/A                 |
 | N/A                                   | misc/for | 200    | N/A                 |
-| N/A                                   | misc/for | 300    | N/A                 |
+| Polybius                              | misc/for | 300    | N/A                 |
 | Signed, Sealed, Delivered, I'm Yours! | web      | 100    | 48323, 48324        |
 | Yours truly                           | web      | 200    | 25400               |
 | Hell.js                               | web      | 300    | 27330, 27331, 27332 |
