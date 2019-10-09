@@ -1,4 +1,4 @@
-# Forensics 100 - Hacking_in_theClear
+# Forensics 100 - Hacking_in_the_Clear
 
 ## Description
 
