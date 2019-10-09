@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: pwn300
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: pwn300
+      labels:
+        app: pwn300
+    spec:
+      containers:
+        - name: pwn300
+          image: phx.ocir.io/oke/bsidespdx2019/pwn300:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+          - containerPort: 31337
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret
