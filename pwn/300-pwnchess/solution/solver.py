@@ -7,8 +7,10 @@ FNAME = '../distFiles/pwnchess'
 DEBUG = False
 REMOTE = False
 
-ADDR_MOVES = 0x602060
-GOT_PLT_PUTS = 0x602018
+elf = ELF(FNAME)
+
+ADDR_MOVES = elf.symbols['moves']
+GOT_PLT_PUTS = elf.got['puts']
 
 if REMOTE:
     raise Exception('add libc')
