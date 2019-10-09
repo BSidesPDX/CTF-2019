@@ -16,3 +16,5 @@ We have been attacked !!! One of our most senior engineers was following some do
 
 
 Flag: `BSidesPDX{Th1is_is_why_yOu_sh0uld_use_F1l3}`
+
+Zip Password: `44366fa4b464ce50daf0b55485463b81986f571a832a80a2f39e4276c527acd3`
