@@ -4,8 +4,11 @@ context.arch = 'amd64'
 
 FNAME = '../distFiles/pwnchess'
 
+HOST = '127.0.0.1'
+PORT = '31337'
+
 DEBUG = False
-REMOTE = False
+REMOTE = True
 
 elf = ELF(FNAME)
 
@@ -13,7 +16,7 @@ ADDR_MOVES = elf.symbols['moves']
 GOT_PLT_PUTS = elf.got['puts']
 
 if REMOTE:
-    raise Exception('add libc')
+    libc = ELF('../distFiles/libc-2.27.so')
 else:
     libc = ELF('/lib/x86_64-linux-gnu/libc.so.6')
 
