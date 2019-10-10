@@ -52,6 +52,11 @@ services:
     depends_on:
       - 300-web-secure-backend
       - 300-web-vulnerable-backend
+  100-pwn:
+    build:
+      context: ./pwn/100-rot13/src
+    ports:
+      - 1337:1337
   300-pwn:
     build:
       context: ./pwn/300-pwnchess/src
