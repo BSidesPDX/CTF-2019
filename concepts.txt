@@ -8,7 +8,15 @@
 
 -- PWN --
 100 - [Challenge Name] - [Challenge Description]
-300 - [Challenge Name] - [Challenge Description]
+300 - pwnchess - You're presented with an x86-64 Linux binary and a copy of libc.so running on the remote
+server.  The binary is compiled with all default anti-exploit mitigations except for PIE.  The binary allows the
+you to peform one of three operations; read one byte at an arbitrary, write one byte to an arbitrary location,
+or exit.  The catch is that you are allowed to perform only 2 operations.  So first you must write a larger value to the
+global variable, moves, memory address.  Next, you will have to leak the libc address by performing multiple reads to
+an address from the GOT section.  Once a libc address is leaked, offsets can be calculated using the provided version of
+libc.  Then, you use the free leak the application gives to the stack to calculate the address on the stack where the
+return address is read from.  You can finally write a ret2libc ROP chain to this location, and finally either exhaust all
+remaining moves or write 0 to the moves address to trigger the ROP chain.
 
 -- RE --
 100 - Magic Numbers - You're presented with an x86-64 Linux binary.  The binary will notify the user that
