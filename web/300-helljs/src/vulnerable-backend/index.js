@@ -18,7 +18,9 @@ const app = express();
 
 const client = new MongoClient(MONGODB_URL, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  reconnectTries: 60,
+  reconnectInterval: 500
 });
 
 app.use(express.json());

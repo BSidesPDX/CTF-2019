@@ -14,11 +14,34 @@ services:
     build:
       context: ./web/100-signedsealed/src/frontend
       args:
-        API_URL: http://127.0.0.1:48323 # should point to the external address of the backend
+        API_URL: http://localhost:48323 # should point to the external address of the backend
     ports:
       - 48324:8080
     depends_on:
       - 100-web-backend
+  200-web-minio:
+    build:
+      context: ./web/200-yourstruly/src/minio
+    network_mode: host # host networking so presigned URLs work
+    environment:
+      - MINIO_ACCESS_KEY=IL0B9GDKIR7XCKYZWNS6
+      - MINIO_SECRET_KEY=IxhrKLZVZ17P2uR0xDvs1kxxuJ7zCKLYkeilXFpi
+  200-web-store:
+    build:
+      context: ./web/200-yourstruly/src/store
+    network_mode: host # only so 200-web-backend can access it in host mode :/
+  200-web-backend:
+    build:
+      context: ./web/200-yourstruly/src/backend
+    network_mode: host # host networking so we can access minio at the same address as the host for presigned URLs to work
+    environment:
+      - CHARACTER_SERVICE_URL=http://localhost:8080
+      - MINIO_ENDPOINT=localhost:9000 # public address of minio
+      - MINIO_ACCESS_KEY_ID=IL0B9GDKIR7XCKYZWNS6
+      - MINIO_SECRET_ACCESS_KEY=IxhrKLZVZ17P2uR0xDvs1kxxuJ7zCKLYkeilXFpi
+    depends_on:
+      - 200-web-store
+      - 200-web-minio
   300-web-mongodb:
     image: mongo
   300-web-vulnerable-backend:
@@ -45,8 +68,8 @@ services:
     build:
       context: ./web/300-helljs/src/frontend
       args:
-        VULNERABLE_API_URL: http://127.0.0.1:27331 # should point to the external address of the vulnerable backend
-        SECURE_API_URL: http://127.0.0.1:27332 # should point to the external address of the secure backend
+        VULNERABLE_API_URL: http://localhost:27331 # should point to the external address of the vulnerable backend
+        SECURE_API_URL: http://localhost:27332 # should point to the external address of the secure backend
     ports:
       - 27330:8080
     depends_on:

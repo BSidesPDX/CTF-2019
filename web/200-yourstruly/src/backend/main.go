@@ -6,13 +6,15 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
+	"path"
 	"time"
 
 	minio "github.com/minio/minio-go/v6"
 )
 
-type Character struct {
+type character struct {
 	FirstName string   `json:"firstName"`
 	LastName  string   `json:"lastName"`
 	Aliases   []string `json:"aliases"`
@@ -20,8 +22,14 @@ type Character struct {
 	PhotoURL  string   `json:"photoUrl"`
 }
 
-func getRemoteCharacters(client *http.Client, serviceURL string) ([]Character, error) {
-	resp, err := client.Get(serviceURL)
+func getRemoteCharacters(client *http.Client, serviceURL string) ([]character, error) {
+	u, err := url.Parse(serviceURL)
+	if err != nil {
+		return nil, fmt.Errorf("unable to parse service URL: %w", err)
+	}
+	u.Path = path.Join(u.Path, "characters")
+
+	resp, err := client.Get(u.String())
 	if err != nil {
 		return nil, fmt.Errorf("unable to make get characters request to service %q: %w", serviceURL, err)
 	}
@@ -31,7 +39,7 @@ func getRemoteCharacters(client *http.Client, serviceURL string) ([]Character, e
 		return nil, fmt.Errorf("expected a 200 OK but got %s", resp.Status)
 	}
 
-	chars := make([]Character, 0)
+	chars := make([]character, 0)
 	if err := json.NewDecoder(io.LimitReader(resp.Body, 16384)).Decode(&chars); err != nil {
 		return nil, fmt.Errorf("unable to JSON decode response: %w", err)
 	}
@@ -64,7 +72,7 @@ func main() {
 
 	http.HandleFunc("/characters", func(res http.ResponseWriter, req *http.Request) {
 		serviceURL := characterService
-		if debug := req.Header.Get("X-Debug-Characters"); debug != "" {
+		if debug := req.Header.Get("X-Debug"); debug != "" {
 			serviceURL = debug
 		}
 
@@ -85,6 +93,10 @@ func main() {
 		}
 
 		json.NewEncoder(res).Encode(chars)
+	})
+
+	http.HandleFunc("/openapi.yaml", func(res http.ResponseWriter, req *http.Request) {
+		io.WriteString(res, openapi)
 	})
 
 	http.ListenAndServe(":8081", nil)
