@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: web200-backend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: web200-backend
+      labels:
+        app: web200-backend
+    spec:
+      containers:
+        - name: web200-backend
+          image: phx.ocir.io/oke/bsidespdx2019/web200_backend:latest
+          imagePullPolicy: Always
+          securityContext:
+            privileged: false
+          ports:
+          - containerPort: 8081
+          env:
+          - name: CHARACTER_SERVICE_URL
+            value: "http://web200-store.bsidespdxctf:8080"
+          - name: MINIO_ENDPOINT
+            value: "web200objectstorage.bsidespdxctf.party:9000"
+          - name: MINIO_ACCESS_KEY_ID
+            value: "IL0B9GDKIR7XCKYZWNS6"
+          - name: MINIO_SECRET_ACCESS_KEY
+            value: "IxhrKLZVZ17P2uR0xDvs1kxxuJ7zCKLYkeilXFpi"
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      imagePullSecrets:
+        - name: ocirsecret
