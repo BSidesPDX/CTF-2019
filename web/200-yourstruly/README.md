@@ -40,4 +40,4 @@ My bugs are self documenting.
 
 (Link to OpenAPI doc here, this will be the "backend" service at path "/openapi.yaml")
 
-Flag: `BSidesPDX{7h3_f8_0f_my_4pp_r3575_w17h_l3f7-p4d?_cb017f1f}`
+Flag: `BSidesPDX{m1cr053rv1c35-m1cr0-p41n-1n-7h3-455-9f9b6761}`
