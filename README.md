@@ -11,7 +11,7 @@ BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSides
 | N/A                                   | physical | 100    | N/A                 |
 | N/A                                   | physical | 200    | N/A                 |
 | N/A                                   | physical | 300    | N/A                 |
-| rot13                                 | pwn      | 100    | 1337                |
+| [rot13](pwn/100-rot13/)               | pwn      | 100    | 1337                |
 | pwnchess                              | pwn      | 300    | 31337               |
 | Magic Numbers                         | re       | 100    | N/A                 |
 | Bad CryptXor                          | re       | 300    | N/A                 |
