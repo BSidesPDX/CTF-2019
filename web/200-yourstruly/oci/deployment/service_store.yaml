@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web200-store
+spec:
+  ports:
+   - port: 8080
+     targetPort: 8080
+  selector:
+    app: web200-store
+  type: LoadBalancer
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: web200-store
+spec:
+  podSelector:
+    matchLabels:
+      app: web200-store
+  ingress:
+  - ports:
+    - port: 8080
+    from: []

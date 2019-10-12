@@ -19,4 +19,6 @@ The frontend Dockerfile has the following build arguments:
 
 Implementing your own authorization is usually a bad idea, but not if you're a rockstar dev like me.
 
+(frontend address here)
+
 Flag: `BSidesPDX{5f0505ea-72d1-40c4-8451-d4a3e19e7491}`
