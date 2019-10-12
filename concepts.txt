@@ -7,7 +7,12 @@
 300 - [Challenge Name] - [Challenge Description]
 
 -- PWN --
-100 - [Challenge Name] - [Challenge Description]
+100 - rot13 - You're presented with an x86 Linux binary.  The binary is compiled with NX, PIE, and stack canaries all
+disabled.  You are prompted for input, then the program performs a ROT13 on the input, and finally prints back the result.
+There is a buffer overflow on the input, as more bytes are read than the allocated buffer size.  The problem is, the input is
+modified by the program (each byte is incremented by 13), so the payload must be modified in the reverse (each byte
+subtracted by 13) before sending it to the program.  The actual payload is simple, as it can just be shellcode with a gadget
+to jump to it.
 300 - pwnchess - You're presented with an x86-64 Linux binary and a copy of libc.so running on the remote
 server.  The binary is compiled with all default anti-exploit mitigations except for PIE.  The binary allows the
 you to peform one of three operations; read one byte at an arbitrary, write one byte to an arbitrary location,

@@ -1,0 +1,9 @@
+service rot13
+{
+        disable         = no
+        flags           = REUSE
+        socket_type     = stream
+        wait            = no
+        user            = rot13
+        server          = /app/rot13
+}
