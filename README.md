@@ -15,9 +15,9 @@ BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSides
 | pwnchess                              | pwn      | 300    | 31337               |
 | Magic Numbers                         | re       | 100    | N/A                 |
 | Bad CryptXor                          | re       | 300    | N/A                 |
-| N/A                                   | misc/for | 100    | N/A                 |
-| N/A                                   | misc/for | 200    | N/A                 |
-| Polybius                              | misc/for | 300    | N/A                 |
+| Trust Game                            | misc     | 100    | N/A                 |
+| Hacking_in_the_Clear                  | for      | 100    | N/A                 |
+| Polybius                              | for      | 300    | N/A                 |
 | Signed, Sealed, Delivered, I'm Yours! | web      | 100    | 48323, 48324        |
 | Yours truly                           | web      | 200    | 25400               |
 | Hell.js                               | web      | 300    | 27330, 27331, 27332 |
