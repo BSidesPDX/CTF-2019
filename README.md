@@ -19,7 +19,7 @@ BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSides
 | [Hacking_in_the_Clear](forensics/for100-Hacking_in_the_Clear/) | for      | 100    | N/A                 |
 | [Polybius](forensics/for300-polybius/)                         | for      | 300    | N/A                 |
 | [Signed, Sealed, Delivered, I'm Yours!](web/100-signedsealed/) | web      | 100    | 48323, 48324        |
-| [Yours truly](web/200-yourstruly/)                             | web      | 200    | 25400               |
+| [Yours truly](web/200-yourstruly/)                             | web      | 200    | 8081, 9000, 8080    |
 | [Hell.js](web/300-helljs/)                                     | web      | 300    | 27330, 27331, 27332 |
 
 ## Local Deployment
