@@ -18,7 +18,13 @@ spec:
   podSelector:
     matchLabels:
       app: web200-store
+  policyTypes:
+  - Ingress
+  - Egress
   ingress:
   - ports:
     - port: 8080
-    from: []
+    from:
+    - podSelector:
+        matchLabels:
+          app: web200-backend
