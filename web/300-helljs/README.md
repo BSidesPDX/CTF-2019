@@ -31,4 +31,6 @@ The secure backend requires the following environment variables:
 
 Minimum Viable Security
 
+web300.bsidespdxctf.party:27330
+
 Flag: `BSidesPDX{7h3_f8_0f_my_4pp_r3575_w17h_l3f7-p4d?_cb017f1f}`

@@ -38,6 +38,6 @@ It listens on port 9000.
 
 My bugs are self documenting.
 
-(Link to OpenAPI doc here, this will be the "backend" service at path "/openapi.yaml")
+web200.bsidespdxctf.party:8081/openapi.yaml
 
 Flag: `BSidesPDX{m1cr053rv1c35-m1cr0-p41n-1n-7h3-455-9f9b6761}`
