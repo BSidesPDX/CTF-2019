@@ -21,4 +21,6 @@ Do you trust me?
 
 How far will you go?
 
+misc100-trustgame.bsidespdxctf.party:5555
+
 Flag: `BSidesPDX{n3v3r_$ud0_(ur1_b4$h_1t5_r3411y_b4d}`
