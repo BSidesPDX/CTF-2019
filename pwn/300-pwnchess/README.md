@@ -10,7 +10,7 @@ If anything needs to be done to deploy it
 
 ## Challenge
 
-I made a game, I call it pwnchess.  You can read/write any memory address, but can you pop a shell in so few moves?  Only the most elitest of hackers will be to get checkmate.
+I made a game, I call it pwnchess.  You can read/write any memory address, but can you pop a shell in so few moves?  Only the most elitest of hackers will be able to get checkmate.
 
 pwnchess.bsidespdxctf.party:31337
 
