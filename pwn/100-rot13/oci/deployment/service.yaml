@@ -20,6 +20,9 @@ spec:
   podSelector:
     matchLabels:
       app: pwn100
+  policyTypes:
+  - Ingress
+  - Egress
   ingress:
   - ports:
     - port: 1337
