@@ -20,7 +20,12 @@ spec:
   podSelector:
     matchLabels:
       app: web300-vulnerable-backend
+  policyTypes:
+  - Ingress
+  - Egress
   ingress:
   - ports:
-    - port: 27331
+    - port: 8080
     from: []
+  egress:
+  - {}

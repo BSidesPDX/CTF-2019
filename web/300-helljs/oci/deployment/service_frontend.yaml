@@ -20,7 +20,10 @@ spec:
   podSelector:
     matchLabels:
       app: web300-frontend
+  policyTypes:
+  - Ingress
+  - Egress
   ingress:
   - ports:
-    - port: 27330
+    - port: 8080
     from: []

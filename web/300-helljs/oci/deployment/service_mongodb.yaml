@@ -9,3 +9,21 @@ spec:
   selector:
     app: mongo
   type: ClusterIP
+---
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: mongo
+  namespace: bsidespdxctf
+spec:
+  podSelector:
+    matchLabels:
+      app: mongo
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: web300-vulnerable-backend
