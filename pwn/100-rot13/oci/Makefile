@@ -12,6 +12,7 @@ clean: deleteDocker deleteKube
 # Docker Configurations
 
 container:
+	cp ../distFiles/rot13 ../src/
 	docker build --no-cache --tag ${CONTAINER_TAG} ../src/
 
 push:

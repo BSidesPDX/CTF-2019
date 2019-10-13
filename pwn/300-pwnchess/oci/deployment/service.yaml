@@ -20,6 +20,9 @@ spec:
   podSelector:
     matchLabels:
       app: pwn300
+  policyTypes:
+  - Ingress
+  - Egress
   ingress:
   - ports:
     - port: 31337

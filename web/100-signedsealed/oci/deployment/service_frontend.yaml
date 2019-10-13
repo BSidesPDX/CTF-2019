@@ -20,7 +20,18 @@ spec:
   podSelector:
     matchLabels:
       app: web100-frontend
+  policyTypes:
+  - Ingress
+  - Egress
   ingress:
   - ports:
-    - port: 48324
+    - port: 8080
     from: []
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          app: web100-backend
+    ports:
+    - protocol: TCP
+      port: 48323

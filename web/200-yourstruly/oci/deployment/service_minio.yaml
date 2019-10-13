@@ -20,6 +20,9 @@ spec:
   podSelector:
     matchLabels:
       app: web200-minio
+  policyTypes:
+  - Ingress
+  - Egress
   ingress:
   - ports:
     - port: 9000
