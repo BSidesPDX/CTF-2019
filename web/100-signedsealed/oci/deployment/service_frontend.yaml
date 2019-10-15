@@ -27,11 +27,3 @@ spec:
   - ports:
     - port: 8080
     from: []
-  egress:
-  - to:
-    - podSelector:
-        matchLabels:
-          app: web100-backend
-    ports:
-    - protocol: TCP
-      port: 48323
