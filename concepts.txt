@@ -2,9 +2,23 @@
 + = challenge written, needs solution/writeup
 
 -- PHYSICAL --
-100 - [Challenge Name] - [Challenge Description]
-200 - [Challenge Name] - [Challenge Description]
-300 - [Challenge Name] - [Challenge Description]
+100 - Poor Man's 2FA - You're presented with two combo keyboxes tha tare shackled together. One is a 4 dial combo style, 
+the other is a push button lock box. Both are easily decodable with no tools required. All information on how to decode 
+them is easily found on YouTube. Inside each box is half the code, so both boxes must be decoded and opened to successfully 
+get the flag.
+200 - Shall we play a game? - [ Description will be added later ] 
+300 - Forgot My Password - You're presented with a rotary telephone. Attached to this rotary telephone is an RFID reader and
+a lock on the 8 digit of the dial. On the face of the dial there is a 5 digit number with the note "IT Help Desk".
+When this number is dialed, an automated IT help desk system answers. There are multiple options in the phone tree,
+but option 9 leads to a password reset menu. However, due to the lock, the 9 cannot be dialed. On old rotary phones,
+there is a dialing technique called switch hook dialing where the button normally used to hang up the phone can be
+tapped to dial numbers. By using switch hook dialing, the password reset menu can be accessed. You are then required to
+input "your" employee ID number. Some of the CTF organizers will have custom RFID badges with their picture and a barcode
+printed on the front. The barcode, when decoded, is the employee ID. RFID cloners and blank cards will be provided, 
+and users will have to covertly clone a badge as well as capture/decode the barcode. Once a correct employee
+ID is entered, the system requests the user to scan their badge on the RFID reader attached to the phone. If the badge
+associated with the previously entered employee ID is scanned, the password reset will be succesful and the flag will
+be spelled out over the phone.
 
 -- PWN --
 100 - rot13 - You're presented with an x86 Linux binary.  The binary is compiled with NX, PIE, and stack canaries all
