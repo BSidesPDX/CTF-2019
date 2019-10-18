@@ -8,6 +8,12 @@ Wow, what a clever idea. Why spend money on tokens or require carrying around a 
 
 Open both locks to get the flag.
 
+**Special instructions:**
+Due to the nature of the physical challenges, each challenge has it's own set of special instruction. Failure to follow these instructions may lead to breaking the challenge equipment.
+1. No brute force strength is necessary. Do not try and force/pry the locks open.
+2. No special tools are necessary for this challenge. If you do have some tools you would like to use, please double check with a CTF organizer before using.
+3. When you're done with the challenge, please follow the reset instructions. 
+
 Flag: `BSidesPDX{tW0_st3p_auth3ntic4ti0n_1s_no7_2f4}`
 
 ## Reset instructions
