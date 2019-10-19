@@ -15,7 +15,7 @@ Due to the nature of the physical challenges, each challenge has it's own set of
 4. During this challenge, you will have to interact in some way with the CTF organizers. Be sneaky, don't be obvious. The organizers will be watching out for you. Plus, it's just more fun that way :)
 5. When you're done with the challenge, please follow the reset instructions. 
 
-Flag: `BSidesPDX{Y0u_go7_th3_passw04d_7im3_T0_h4ck_th3_gibs0n}`
+Flag: `BSidesPDX{Y0u_go7_th3_passw0rd_7im3_T0_h4ck_th3_gibs0n}`
 
 
 ## Reset instructions
