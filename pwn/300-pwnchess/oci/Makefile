@@ -32,3 +32,4 @@ serve:
 deleteKube:
 	cat deployment/deploy.yaml | kubectl delete --namespace bsidespdxctf -f -
 	kubectl delete --namespace  bsidespdxctf -f deployment/service.yaml
+	oci dns record domain delete --zone-name-or-id bsidespdxctf.party --domain pwnchess.bsidespdxctf.party --force

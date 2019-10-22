@@ -52,3 +52,6 @@ deleteKube:
 	kubectl delete --namespace  bsidespdxctf -f deployment/service_vulnerable_backend.yaml
 	kubectl delete --namespace  bsidespdxctf -f deployment/service_secure_backend.yaml
 	kubectl delete --namespace  bsidespdxctf -f deployment/service_frontend.yaml
+	oci dns record domain delete --zone-name-or-id bsidespdxctf.party --domain web300backend-a.bsidespdxctf.party --force
+	oci dns record domain delete --zone-name-or-id bsidespdxctf.party --domain web300backend-b.bsidespdxctf.party --force
+	oci dns record domain delete --zone-name-or-id bsidespdxctf.party --domain web300.bsidespdxctf.party --force

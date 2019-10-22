@@ -38,3 +38,5 @@ deleteKube:
 	cat deployment/deploy_frontend.yaml | kubectl delete --namespace bsidespdxctf -f -
 	kubectl delete --namespace  bsidespdxctf -f deployment/service_backend.yaml
 	kubectl delete --namespace  bsidespdxctf -f deployment/service_frontend.yaml
+	oci dns record domain delete --zone-name-or-id bsidespdxctf.party --domain web100backend.bsidespdxctf.party --force
+	oci dns record domain delete --zone-name-or-id bsidespdxctf.party --domain web100.bsidespdxctf.party --force

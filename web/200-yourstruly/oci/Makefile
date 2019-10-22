@@ -45,3 +45,5 @@ deleteKube:
 	kubectl delete --namespace  bsidespdxctf -f deployment/service_minio.yaml
 	kubectl delete --namespace  bsidespdxctf -f deployment/service_store.yaml
 	kubectl delete --namespace  bsidespdxctf -f deployment/service_backend.yaml
+	oci dns record domain delete --zone-name-or-id bsidespdxctf.party --domain web200objectstorage.bsidespdxctf.party --force
+	oci dns record domain delete --zone-name-or-id bsidespdxctf.party --domain web200.bsidespdxctf.party --force
