@@ -57,7 +57,9 @@ Physical deployment; no infrastructure.
 
 ## Challenge
 
-You don't need a PhD to know when a hard drive has read its last sector and clicked its last click. 
+An online aqcuaintance claims to have lead the 2019 raid on the main Area 51  top secret medical research facility.   The things they saw were horrifying..ghastly..unbelievable.  Forunately they were able to bring back proof- an older hard drive they found while exploring what seemed to be an exam room.  Unfortunately, they dropped it when trying to escape the clutches of Area 51 guards.  
+
+You may not be a data recovery expert but you don't need a PhD to know when a hard drive has read its last sector and clicked its last click. 
 What you do need are steady hands, patience, and maybe a touch of madness to bring it back from the dead.  Push your fine motor skills and ingenuity to their limit and head over to the data recovery station in the CTF room.  Who knows?  You could be the Herbert West of head swaps..
 
 flag:```BSidesPDX{ITs_AL1v3!}```
