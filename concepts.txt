@@ -26,6 +26,8 @@ and users will have to covertly clone a badge as well as capture/decode the barc
 ID is entered, the system requests the user to scan their badge on the RFID reader attached to the phone. If the badge
 associated with the previously entered employee ID is scanned, the password reset will be succesful and the flag will
 be spelled out over the phone.
+
+-- DATA RECOVERY --
 300 - Off With Your Heads! - In order to find the flag for this hardware focused challenge you have to perform a task very 
 similar to the data recovery procedure known as a head swap.  In a normal head swap for data recovery the technician first has
 to remove the bad heads from the "patient" drive, very carefully remove the functional heads from a "donor" drive, then place 
@@ -43,8 +45,7 @@ debris from damaging the platters (disks) or heads.  Someone will be at the tabl
 equipment only- they will not help you with the actual procedure.  When you are done with the head swap you can test to see if
 it was successful on your own machine.  If it was successful you should be able to find the flag.  If it was not successful, the
 flag is nevermore.  Signs that it wasn't a success are clicking, beeping, buzzing, scratching, gurgling, moaning, and/or dead 
-silence (as in the drive won't boot).  
-
+silence (as in the drive won't boot).
 
 -- PWN --
 100 - rot13 - You're presented with an x86 Linux binary.  The binary is compiled with NX, PIE, and stack canaries all
