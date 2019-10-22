@@ -6,7 +6,14 @@
 the other is a push button lock box. Both are easily decodable with no tools required. All information on how to decode 
 them is easily found on YouTube. Inside each box is half the code, so both boxes must be decoded and opened to successfully 
 get the flag.
-200 - Shall we play a game? - [ Description will be added later ] 
+200 - Shall we play a game? - You're presented with a box. It's got a number of toggle switches, colored buttons, a keypad,
+small LCD screen, and two tubular key locks. You're also provided with what looks like a partially redacted document. The
+idea is that WOPR decided to go ahead and launch a nuclear weapon. The document describes the steps necessary to abort the
+launch. The buttons and toggles will be variations on requiring the correct secquence to be set. The final step of the
+challenge requires two keys to be turned simultaneously. However, only one key is provided. A tubular key cutter and
+blank tubular keys will be provided to the participants and they will have to figure out how to duplicate the key. If
+they can successfully duplicate the key and then turn both simultaneously, the nuclear launch will be aborted and
+the flag will be displayed on the LCD screen.
 300 - Forgot My Password - You're presented with a rotary telephone. Attached to this rotary telephone is an RFID reader and
 a lock on the 8 digit of the dial. On the face of the dial there is a 5 digit number with the note "IT Help Desk".
 When this number is dialed, an automated IT help desk system answers. There are multiple options in the phone tree,
