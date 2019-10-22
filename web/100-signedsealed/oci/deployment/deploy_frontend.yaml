@@ -1,9 +1,12 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web100-frontend
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: web100-frontend
   template:
     metadata:
       name: web100-frontend
