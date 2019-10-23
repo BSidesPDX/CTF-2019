@@ -1,8 +1,8 @@
 ## Description
 
-  For this hardware focused challenge you will receive a spinning disk storage device- a 3.5in form factor HDD with SATA connector.  You will also receive the materials necessary to complete the challenge and find the flag should Off With Your Heads! be successful.
+  For this hardware focused challenge you will receive a spinning disk storage device- a 3.5in form factor HDD with SATA connector.  You will also receive the materials necessary to complete the challenge and find the flag should OffWithYourHeads! be successful.
 In order to find the flag you have to perform a task very similar to the data recovery procedure known as a head swap.  In a normal
-headswap for data recovery, the technician first has to remove the bad heads from the "patient" drive, very carefully remove the 
+head swap for data recovery, the technician first has to remove the bad heads from the "patient" drive, very carefully remove the 
 functional heads from a "donor" drive, then place the donor heads into the patient.  Since matching donors with patients can be a 
 challenge unto itself and would require more HDDs and more space, this challenge only requires you to completely remove heads from 
 the hard drive provided to you then place them back into the same drive.  What is meant by completely is that simply sliding them 
@@ -21,7 +21,7 @@ equipment only- they will not help you with the actual procedure.
 
   When you are done with the head swap you can test to see if it was successful on your own machine.  If it was successful, you 
 should be able to find the flag; the hard drive model ID (and the capacity, just for fun) has been altered and houses the flag rather than the manufacturer issued information.  If it was not successful, the flag is nevermore.  Signs that it wasn't a success are clicking, 
-beeping, scratching, gurgling, moaning, and/or absolute silence (as in the drive doesn't boot).
+beeping, scratching, gurgling, moaning, or dead silence (as in the drive doesn't boot).
 
 Here is a full list of what is provided to you:
 *  A ruler*
@@ -57,7 +57,7 @@ Physical deployment; no infrastructure.
 
 ## Challenge
 
-An online aqcuaintance claims to have lead the 2019 raid on the main Area 51  top secret medical research facility.   The things they saw were horrifying..ghastly..unbelievable.  Forunately they were able to bring back proof- an older hard drive they found while exploring what seemed to be an exam room.  Unfortunately, they dropped it when trying to escape the clutches of Area 51 guards.  
+An online aqcuaintance claims to have lead the 2019 raid on the main Area 51 medical research facility.   The things they saw were horrifying..ghastly..unbelievable.  Fortunately they were able to bring back proof- an older hard drive they found while exploring what seemed to be an exam room.  Unfortunately they dropped it when trying to escape the clutches of Area 51 guards.  
 
 You may not be a data recovery expert but you don't need a PhD to know when a hard drive has read its last sector and clicked its last click. 
 What you do need are steady hands, patience, and maybe a touch of madness to bring it back from the dead.  Push your fine motor skills and ingenuity to their limit and head over to the data recovery station in the CTF room.  Who knows?  You could be the Herbert West of head swaps..
