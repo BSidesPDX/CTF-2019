@@ -30,15 +30,19 @@ Here is a full list of what is provided to you:
    *  tape
 *  Scissors*
 *  SATA & power adapter*
-*  A hard drive**
+*  A hard drive***
 *  DIY head comb "schematics"
 *  Nitrile gloves
-*  Tweezers*
-*  Torque set* 
+*  Tweezers**
+*  Torque set** 
+*  Pliers- needlenose**
+*  Magnet removal device** 
 
 *This item must be returned to us as soon as you are done using it.
 
-**Return the hard drive to us once you have found the flag- please do not take it outside the CTF room. 
+**This item cannot leave the data recovery station.
+
+***Return the hard drive to us once you have found the flag- please do not take it outside the CTF room. 
 
 Important things to remember:
 1.  The heads can't touch ANYTHING.
