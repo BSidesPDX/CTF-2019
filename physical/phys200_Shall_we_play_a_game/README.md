@@ -11,6 +11,7 @@ Due to the nature of the physical challenges, each challenge has it's own set of
 4. Blank tubular keys have been provided. Please try and limit the number of blank keys used as there are only a limited number.
 5. When you're done with the challenge, please follow the reset instructions.
 
+Flag: ```BSidesPDX{Is_thi5_Re4l_or_iS_i7_a_gAm?3}```
 ## Reset Instructions
 1. Flip all Control Selector switches back to off.
 2. Toggle the power switch on the side of the box.
