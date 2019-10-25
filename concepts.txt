@@ -46,6 +46,22 @@ equipment only- they will not help you with the actual procedure.  When you are 
 it was successful on your own machine.  If it was successful you should be able to find the flag.  If it was not successful, the
 flag is nevermore.  Signs that it wasn't a success are clicking, beeping, buzzing, scratching, gurgling, moaning, and/or dead 
 silence (as in the drive won't boot).
+100 - Gravedigger101 - So, the head swap challenge was too difficult for you.  Fear not!  And want not and waste not etc etc.  No
+reason to immediately discard an entire hard drive just because of a few bad heads.  Data recovery requires the use of all the 
+components of a hard drive, and we tend to recycle our donors only after we have harvested all the good parts so we can use them
+later.  Now along with head swaps, PCB swaps are another common procedure in this field.  Without the ROM which is located on the 
+PCB we couldn't access the hard drive's Service Area thus allowing it to boot and spin, let alone allow access to user data.  And
+ROM capacity is just large enough to store a CTF flag..so that's what we did!  The challenge will require you to first figure out
+that you aren't quite done with the HDDs post-head swap.  You will be prompted to visit the "data recovery graveyard" where you 
+can dig through the dead HDDs from OffWithYourHeads! as well as an assortment of other PCBs and HDDs from various manufacturers.
+Though the graveyard will contain many different brands/families of non-functional HDDs as well as functional/non-functional PCBs
+they will all share something in common- the ROM chip can be desoldered.  Once desoldered you will have to figure out a way to 
+dump the ROM.  We will have USB MiniPRO TL866CS Programmers (x2) as well as USB to TTL CH341A EEPROM programmers (x2) available
+for use to create a ROM dump and find the flag.  The programmers will be labeled with "Gravedigger101".  Both the MiniPRO and the
+TTL programmer will require the download of drivers.  Due to the variance in ROM size of each HDD, the flag will not be hidden at
+the same offset though it will be located toward the end of the ROM data, inserted just before the last "empty" space begins
+with FF FF FF FF.
+
 
 -- PWN --
 100 - rot13 - You're presented with an x86 Linux binary.  The binary is compiled with NX, PIE, and stack canaries all
