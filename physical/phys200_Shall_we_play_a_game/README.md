@@ -3,6 +3,9 @@
 ## Description
 WOPR is at it again, except this time, it has started preparation to actually launch nuclear missiles! Some smart people had planned for this situation and thus developed the BGMAC. Use the BGMAC to abort the launch sequence and you'll receive a flag.
 
+You stumbled across this document, maybe it might be useful?
+![BGMAC Documentation](https://i.imgur.com/uVuLVch.jpg)
+
 **Special instructions:**
 Due to the nature of the physical challenges, each challenge has it's own set of special instruction. Failure to follow these instructions may lead to breaking the challenge equipment.
 1. No brute force strength is necessary. Do not try and force/pry the BGMAC open. Please be gentle with all switches and buttons.
