@@ -36,7 +36,7 @@ begins with FF FF FF FF.
 
 ## Deployment
 
-# Windows:
+### Windows:
 
 Xgecu Drivers and Software
 http://www.autoelectric.cn/MiniPro/XgproV900_Setup.rar
@@ -47,7 +47,7 @@ http://www.autoelectric.cn/MiniPro/minipro_setup685.rar
 CH341A Programmer:
 http://www.mediafire.com/file/v7yp367795dz877/CH341A-programmer-software-1.29.zip/file
 
-# Linux:
+### Linux:
 
 IT JUST WORKS!
 
