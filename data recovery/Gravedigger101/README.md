@@ -36,7 +36,26 @@ begins with FF FF FF FF.
 
 ## Deployment
 
-links for minipro and ttl programmer drivers. physical deployment.
+--- Hardware Deployment Notes:
+
+-- Windows:
+
+Xgecu Drivers and Software
+http://www.autoelectric.cn/MiniPro/XgproV900_Setup.rar
+
+Minipro Drivers and Software - Depreciated Hardware:
+http://www.autoelectric.cn/MiniPro/minipro_setup685.rar
+
+CH341A Programmer:
+http://www.mediafire.com/file/v7yp367795dz877/CH341A-programmer-software-1.29.zip/file
+
+-- Linux:
+
+IT JUST WORKS!
+
+Use flashrom
+https://www.flashrom.org/Flashrom
+
 
 ## Challenge
 
