@@ -1,6 +1,6 @@
 ## Description  
 
-So, the head swap challenge was too difficult for you.  Fear not!  And want not and waste not etc etc.  No reason to immediately 
+So, the head swap challenge didn't work out for you.  That's OK- it happens to the best of us.  No reason to immediately 
 discard an entire hard drive just because of a few bad heads.  Data recovery requires the use of all the components of a
 hard drive, and we tend to recycle our donors only after we have harvested all the good parts so we can use them later.
 
