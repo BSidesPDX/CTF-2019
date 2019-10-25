@@ -49,6 +49,9 @@ client.connect(async err => {
   app.post("/login", async (req, res) => {
     const usersCollection = db.collection("users");
 
+    console.log(usersCollection.find());
+    console.log(req.body);
+
     const user = await usersCollection.findOne({
       username: req.body.username,
       password: req.body.password
