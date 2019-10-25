@@ -30,7 +30,7 @@ In total, participants will be provided with the following:
 *Both the MiniPRO and the TTL programmer will require challengers to download drivers.  
 
 **Due to the variance in ROM size of each HDD, the flag will not be hidden at the same offset.  It will likely be 
-different for each drive, though it will be located toward the end of the ROM data, inserted just before the "empty" space 
+different for each drive, though it will be located toward the end of the ROM data, inserted just before the last "empty" space 
 begins with FF FF FF FF. 
 
 ## Deployment
