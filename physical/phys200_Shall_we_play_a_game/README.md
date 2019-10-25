@@ -17,4 +17,5 @@ Due to the nature of the physical challenges, each challenge has it's own set of
 Flag: ```BSidesPDX{Is_thi5_Re4l_or_iS_i7_a_gAm?3}```
 ## Reset Instructions
 1. Flip all Control Selector switches back to off.
-2. Toggle the power switch on the side of the box.
+2. Turn both keys back to the off position.
+3. Toggle the power switch on the side of the box.
