@@ -8,9 +8,9 @@ BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSides
 
 | Challenge Name                                                 | Category      | Points | Port(s)             |
 | -------------------------------------------------------------- | ------------- | ------ | ------------------- |
-| N/A                                                            | physical      | 100    | N/A                 |
-| N/A                                                            | physical      | 200    | N/A                 |
-| N/A                                                            | physical      | 300    | N/A                 |
+| [Poor Man's 2FA](physical/phys100-Poor_Mans_2fa)               | physical      | 100    | N/A                 |
+| [Shall we play a game?](physical/phys200_Shall_we_play_a_game) | physical      | 200    | N/A                 |
+| [Forgot my password](physical/phys300-Forgot_my_password)      | physical      | 300    | N/A                 |
 | [Gravedigger101](data%20recovery/100-Gravedigger101/)          | data recovery | 100    | N/A                 |
 | [OffWithYourHeads](data%20recovery/300-OffWithYourHeads!/)     | data recovery | 300    | N/A                 |
 | [rot13](pwn/100-rot13/)                                        | pwn           | 100    | 1337                |
