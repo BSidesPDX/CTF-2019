@@ -6,21 +6,23 @@ BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSides
 
 ## Challenges
 
-| Challenge Name                                                 | Category | Points | Port(s)             |
-| -------------------------------------------------------------- | -------- | ------ | ------------------- |
-| [Gravedigger101](data%20recovery/100-Gravedigger101/)            | physical | 100    | N/A                 |
-| N/A                                                            | physical | 200    | N/A                 |
-| [OffWithYourHeads](data%20recovery/300-OffWithYourHeads!/)       | physical | 300    | N/A                 |
-| [rot13](pwn/100-rot13/)                                        | pwn      | 100    | 1337                |
-| [pwnchess](pwn/300-pwnchess/)                                  | pwn      | 300    | 31337               |
-| [Magic Numbers](re/100-magicnumbers/)                          | re       | 100    | N/A                 |
-| [Bad CryptXor](re/300-badcryptXor/)                            | re       | 300    | N/A                 |
-| [Trust Game](misc/100-TrustGame/)                              | misc     | 100    | N/A                 |
-| [Hacking_in_the_Clear](forensics/for100-Hacking_in_the_Clear/) | for      | 100    | N/A                 |
-| [Polybius](forensics/for300-polybius/)                         | for      | 300    | N/A                 |
-| [Signed, Sealed, Delivered, I'm Yours!](web/100-signedsealed/) | web      | 100    | 48323, 48324        |
-| [Yours truly](web/200-yourstruly/)                             | web      | 200    | 8081, 9000, 8080    |
-| [Hell.js](web/300-helljs/)                                     | web      | 300    | 27330, 27331, 27332 |
+| Challenge Name                                                 | Category      | Points | Port(s)             |
+| -------------------------------------------------------------- | ------------- | ------ | ------------------- |
+| [Poor Man's 2FA](physical/phys100-Poor_Mans_2fa)               | physical      | 100    | N/A                 |
+| [Shall we play a game?](physical/phys200_Shall_we_play_a_game) | physical      | 200    | N/A                 |
+| [Forgot my password](physical/phys300-Forgot_my_password)      | physical      | 300    | N/A                 |
+| [Gravedigger101](data%20recovery/100-Gravedigger101/)          | data recovery | 100    | N/A                 |
+| [OffWithYourHeads](data%20recovery/300-OffWithYourHeads!/)     | data recovery | 300    | N/A                 |
+| [rot13](pwn/100-rot13/)                                        | pwn           | 100    | 1337                |
+| [pwnchess](pwn/300-pwnchess/)                                  | pwn           | 300    | 31337               |
+| [Magic Numbers](re/100-magicnumbers/)                          | re            | 100    | N/A                 |
+| [Bad CryptXor](re/300-badcryptXor/)                            | re            | 300    | N/A                 |
+| [Trust Game](misc/100-TrustGame/)                              | misc          | 100    | N/A                 |
+| [Hacking_in_the_Clear](forensics/for100-Hacking_in_the_Clear/) | for           | 100    | N/A                 |
+| [Polybius](forensics/for300-polybius/)                         | for           | 300    | N/A                 |
+| [Signed, Sealed, Delivered, I'm Yours!](web/100-signedsealed/) | web           | 100    | 48323, 48324        |
+| [Yours truly](web/200-yourstruly/)                             | web           | 200    | 8081, 9000, 8080    |
+| [Hell.js](web/300-helljs/)                                     | web           | 300    | 27330, 27331, 27332 |
 
 ## Local Deployment
 
