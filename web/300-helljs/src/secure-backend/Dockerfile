@@ -8,4 +8,6 @@ RUN npm install
 
 COPY . .
 
+RUN adduser --disabled-password --gecos '' web300secbackend
+USER web300secbackend
 ENTRYPOINT [ "node", "index.js"]
