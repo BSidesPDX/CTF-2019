@@ -1,0 +1,15 @@
+{
+  "name": "solution",
+  "version": "1.0.0",
+  "description": "You could do all of this via the API or just by using the frontend.",
+  "main": "solve.js",
+  "scripts": {
+    "solve": "node solve.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "uuid": "^3.3.3"
+  }
+}
