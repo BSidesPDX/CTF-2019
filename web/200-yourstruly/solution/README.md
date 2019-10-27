@@ -40,7 +40,7 @@ photoUrl.
 ## Think about what you can get it to sign
 
 Play around for a bit. Eventually, get back to looking at the OpenAPI spec and notice
-the example value for photo: "20897.jpg". Try returning that.
+the example value for photo: "20897.jpg". Try returning that. Alternatively, you can return an empty photo, and look at the contents of the entire bucket.
 
 ```bash
 curl -Ss localhost:8081/characters | jq '[.[0] | .photo = "20897.jpg"]' > static/characters
