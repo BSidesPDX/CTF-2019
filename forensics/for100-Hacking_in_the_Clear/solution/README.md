@@ -16,7 +16,7 @@ If you keep following the stream you will stumble on the attacker ziping the loo
 
 Now that you know the attacker zipped a bunch of files and encrypted it with a password it is time to get the zip.
 
-To get the zip file go to `file -> export -> object -> HTTP` and select lootz.zip and save it to your machine.
+To get the zip file go to `file -> export -> object -> HTTP` and select `lootz.zip` and save it to your machine.
 
 Unzip the contents using the password that you found. 
 
