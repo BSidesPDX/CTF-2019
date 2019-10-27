@@ -4,6 +4,35 @@
 
 BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSidesPDX/bsides-ctf-framework). See [TTimzen's blog post](https://www.tophertimzen.com/blog/BSidesPDXCTFFramework/) for a detailed explanation of the framework, motivations, and instructions for writing challenges.
 
+## Final Statistics
+
+The challenge ended with:
+
+* 72 teams registered
+* 135 individual players
+* 158 flags submitted
+* Every single challenge solved
+
+The most solved challenges were:
+
+* 28 solves for Hacking_in_the_clear (forensics)
+* 26 solves for Magic Numbbers (re)
+  
+The least solved challenges were:
+
+* 3 solves for pwnchess (pwn)
+* 4 solves for Hell.js (web)
+
+![Solve Counts](solves.png)
+
+The top 3 teams were:
+
+* OSUSEC - 3378 points
+* Attacker Community - 3110 points
+* Red Tuxedo - 2844 points
+
+![Scoreboard](scoreboard.png)
+
 ## Challenges
 
 | Challenge Name                                                 | Category      | Points | Port(s)             |
