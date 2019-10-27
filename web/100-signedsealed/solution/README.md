@@ -31,3 +31,11 @@ localStorage.setItem('jwt', tok.map(v => btoa(JSON.stringify(v))).join(".") + ".
 ## Get the flag
 
 Hit "Get flag"!
+
+# Solution Script
+
+```bash
+npm i
+export SIGNED_SEALED_BASE_BACKEND_URL=http://localhost:48323
+npm run solve
+```
