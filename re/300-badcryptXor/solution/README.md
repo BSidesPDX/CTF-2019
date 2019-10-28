@@ -103,7 +103,7 @@ Notice the right side has many paths that lead to it, and it ultimately calls `e
 
 ![](img/ida13.png)
 
-Keep stepping until you have executed the next systall.  Now let's take a look at our terminal window.
+Keep stepping until you have executed the next syscall.  Now let's take a look at our terminal window.
 
 ![](img/ida14.png)
 
