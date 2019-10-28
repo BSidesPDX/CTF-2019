@@ -170,7 +170,7 @@ Ok, let's try in the debugger now!
 
 That looks better!
 
-T is the 20th letter in the alphabet.  So our return address will be located at `4*20 == 80`.  So that means our padding should be actually 4 before that, so the padding should be a lengtho of `76`.
+T is the 20th letter in the alphabet.  So our return address will be located at `4*20 == 80`.  So that means our padding should be actually 4 before that, so the padding should be a length of `76`.
 
 Let's confirm that we are correct.  We will use this as our payload:
 
