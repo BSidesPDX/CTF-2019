@@ -140,3 +140,5 @@ Enter filename to save encrypted file: bsidesre300flag.png
 ```
 
 And finally let's take a look at the image.
+
+![](img/bsidesre300flag.png)
