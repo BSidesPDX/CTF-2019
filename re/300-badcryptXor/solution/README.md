@@ -24,19 +24,13 @@ Looks like we need to figure out the password to proceed.
 
 ## Static Analysis with IDA Freeware 7.0
 
-Once you have loaded the binary into IDA (default options are fine), the first thing we should do, is try and determine when `Enter the password` is printed.  If we go to main, we can see near the string near the top.
+Once you have loaded the binary into IDA (default options are fine), the first thing we should do, is try and determine when `Enter the password` is printed.  If we go to main, we can see the string near the top.
 
-```
-push    rbp
-mov     eax, 1
-mov     edi, 1          ; fd
-mov     rsi, offset buf ; "Enter the password\npassword is correct"...
-mov     edx, 13h        ; count
-syscall                 ; LINUX - sys_write
-mov     eax, 0
-```
+![](img/ida1.png)
 
 Notice, the binary isn't using the familiar libc function, `printf` or `puts` to print the string.  Instead it is directly performing a syscall to write to `stdout` (0x1).  This implies the challenge was either partially or entirely written in assembly.
+
+![](img/ida2.png)
 
 Well, looking a little further down, we can see a loop in which an xor cipher is performed against a hardcoded chunk of memory (`0x601085`), using the key: `0x42`.  Once that is done, it pushes a bunch of values to the stack and then jumps to `0x601085`.  And perhaps you notice the instructions at `0x601085` are really confusing, this is because these instructions are getting modified at runtime.
 
@@ -44,17 +38,27 @@ Well, looking a little further down, we can see a loop in which an xor cipher is
 
 In the writeup for Magic Numbers, I demonstrated how to use Ghidra to statically analyse the binary.  However, when reverse engineering, it's helpful to be aware of multiple techniques.  One trick I like is to leverage a debugger, this allows you to follow the binary's code execution in real-time.  You can use IDA Freeware to do so, alternatively, `GDB` can also be used.
 
+![](img/ida3.png)
+
 With IDA, you can set a breakpoint with `Right Click -> Add Breakpoint` or more simply press `F2`.  So let's go ahead and set a breakpoint at `jmp     loc_601085`(`0x40059D`).
 
 Next, go ahead and run the program (press the green play button at the top).
 
 Wow, notice how the next instructions are a little more straight forward?  That's because the instructions were just decrypted by the xor cipher.
 
+### IDA Debugger Controls
+
+![](img/ida4.png)
+
 These are the buttons used for controlling the debugger execution.  The play button will continue until the next breakpoint.  The stop button will halt all exection and exit debugger mode.  On the right side, the double arrows is the "Step Into" operation, meaning 1 instruction is executed, if it's a `call` to another function, the debugger will follow execution within the function.  The single arrow button is a "Step Over" operation, meaning 1 instruction is executed, but if it's a `call` to another function that entire function is allowed to execute.  These are the main operations, but feel free to experiment with the other ones.
 
-So we can see, this is where the string is read, let's keep executing the instructions (by pressing either the Step Over or Step Into buttons.
+---
 
-Notice when we get to the Syscall, the program hangs for a moment, that's because it's waiting for user input.  Let's go ahead and enter something.
+Let's keep executing the instructions (by pressing either the Step Over or Step Into buttons.
+
+![](img/ida5.png)
+
+Notice when we get to the Syscall, the program hangs for a moment, that's because it's waiting for user input.  Let's go ahead and enter something.  Above, I entered `AAAABBBB`.
 
 Ok, after the syscall operation completed, notice that IDA takes us out of graph view.  That's because IDA is behaving a little weird due to the strange behavior of the binary (modifying instructions at runtime).  This is pretty simple to fix though, just select the memory and press `C` to convert it to code.  You may have to do this a few times.  Once IDA renders the bytes as instructions, you can press spacebar to go back to graph view, you should have something similar to this now:
 
