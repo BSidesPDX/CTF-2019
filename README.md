@@ -16,7 +16,7 @@ The challenge ended with:
 The most solved challenges were:
 
 * 28 solves for Hacking_in_the_clear (forensics)
-* 26 solves for Magic Numbbers (re)
+* 26 solves for Magic Numbers (re)
   
 The least solved challenges were:
 
