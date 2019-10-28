@@ -146,7 +146,7 @@ Then run `continue`.
 
 Let's step one more time so that `leave` gets executed.  To step, just enter `ni` (next instruction).
 
-!()[]
+![](img/gdb1.png)
 
 So `$esp` is pointing at `"aaaabbbbccccddddeeeeffffgggg"`.  Hmm, `aaaabbbbccccddddeeeeffffgggg` was never in our payload.  However, remember that this challenge is performing a rot13 on our input.  So this is likely the result.  So let's update the script to so that it subtracts 13 from our payload right before sending it, that way, once the rot13 is performed, it's back to it's original value.
 
@@ -166,7 +166,7 @@ p.sendline(payload_rotted)
 
 Ok, let's try in the debugger now!
 
-!()[]
+![](img/gdb2.png)
 
 That looks better!
 
@@ -180,7 +180,7 @@ payload += 'A'*76
 payload += 'EDCB'
 ```
 
-!()[]
+![](img/gdb3.png)
 
 Great, we now know exactly where to put our return address.  The problem is, we have no idea what the stack address on the remote server is going to be, it's random.  However, since this binary isn't compiled with PIE (Position Independent Execution), we know the address of where the ELF binary itself will be loaded at.
 
@@ -399,3 +399,5 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjhh/
 $ cat /app/flag.txt
 BSidesPDX{pwn_it__l1k3_its_1999_AAAAAAAAAAAAAAAAAAAAAAAAAAAA%}
 ```
+
+You can get the full exploit script here: [solver.py](solver.py)
