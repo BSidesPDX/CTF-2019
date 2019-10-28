@@ -60,15 +60,23 @@ Let's keep executing the instructions (by pressing either the Step Over or Step 
 
 Notice when we get to the Syscall, the program hangs for a moment, that's because it's waiting for user input.  Let's go ahead and enter something.  Above, I entered `AAAABBBB`.
 
+![](img/ida6.png)
+
 Ok, after the syscall operation completed, notice that IDA takes us out of graph view.  That's because IDA is behaving a little weird due to the strange behavior of the binary (modifying instructions at runtime).  This is pretty simple to fix though, just select the memory and press `C` to convert it to code.  You may have to do this a few times.  Once IDA renders the bytes as instructions, you can press spacebar to go back to graph view, you should have something similar to this now:
+
+![](img/ida7.png)
 
 We notice the operation: `cmp     rax, 0Bh` immediately following the read.  So it looks like the program is expecting rax to be equal to `0xb`(11).
 
 So you can either hover over `rax` or take a look at the Registers window.
 
+![](img/ida8.png)
+
 Hmm, so it's currently set to `0x9`.  This makes sense, since we used the input `AAAABBBB` which is length of 8, plus 1 for the newline character.  So you could restart the debugging and instead pass in a longer string, but that sounds tedious and IDA actually doesn't handle starting and stopping debugging weird code (self modifying code, common for packers and cryptors) like this very well.  So let's just manually change the code execution flow.
 
 Using the debugger, we can easily change the flow of execution by changing where the instruction pointer is at.  To do this, select the instruction you want to execute and `Right Click -> Set IP`.
+
+![](img/ida9.png)
 
 If we execute a few more instructions, we get to:
 
@@ -79,23 +87,43 @@ cmp     dl, 48h
 
 This looks like it may be an xor cipher and cause the password check to fail.  We can bypass this check by manually changing the value of register `dl` (lower bits of `rdx`) to 0x48.  Just double click RDX in the `General registers` window.
 
+![](img/ida10.png)
+
 Now we can continue stepping and instead of failing the password check, it drops us out of graph view once again.  This time, the code looks correct, but I want to view it in graph view.  So you can `Right Click -> Create Function` or just press the `P` key to tell IDA this is a function (even though it's technically not).
+
+![](img/ida11.png)
 
 Ok, so this looks like each character of the password is being checked individually.
 
 You could manually reverse the password, but I'm lazy, so let's once again change the instruction pointer to bypass all of this.
 
+![](img/ida12.png)
+
 Notice the right side has many paths that lead to it, and it ultimately calls `exit`.  So let's not go there, and take the left path.
 
-Now let's take a look at our terminal window.
+![](img/ida13.png)
+
+Keep stepping until you have executed the next systall.  Now let's take a look at our terminal window.
+
+![](img/ida14.png)
 
 Great, we successfully bypassed the password check.  Let's continue stepping.
 
+![](img/ida15.png)
+
 This looks like another xor loop.  Let's just set a breakpoint at `jmp r15` and then press the `Continue` button (green play button).
+
+![](img/ida16.png)
+
+And following the jump to r15 takes us to...
+
+![](img/ida17.png)
 
 Huh, what's this?  What does `sys_memfd_create` do?  Well, you could do some googling, which might lead you to this helpful page: https://magisterquis.github.io/2018/03/31/in-memory-only-elf-execution.html
 
 But even if you didn't figure out exactly how this is all working, you still might notice something interesting if you double click the `a2` variable and look at the memory there.
+
+![](img/ida18.png)
 
 It starts with `\x7fELF`, this is the ELF magic number.  So this is another ELF binary within the initial binary.  Let's extract it!
 
@@ -115,6 +143,8 @@ Source: https://stackoverflow.com/a/48795835/3250699
 
 To execute this, press `Shift + F2` and paste the code in and click the `Run` button.
 
+![](img/ida19.png)
+
 And then let's check to ensure it appears to have dumped the file:
 
 ```
@@ -124,9 +154,13 @@ $ file ~/innerfile
 
 Great, now let's close this IDA session and start a new one.
 
+![](img/ida20.png)
+
 At the top of `main`, we can see a few strings that give hints towards what this inner binary is doing.  It is requesting the name of a file to encrypt and the name of the newly encrypted file.
 
 Lets skip the standard calls to `fopen` and jump straight down to the encryption part of the code.
+
+![](img/ida21.png)
 
 Once again, who could have guessed, an xor encryption is being performed.  This time, it's a little more complicated though.
 
