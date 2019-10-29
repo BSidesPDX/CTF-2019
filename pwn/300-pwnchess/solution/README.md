@@ -107,7 +107,7 @@ These helper functions will make working with the service a lot easier.  Both `p
 
 Let's start by opening the program in your preferred disassembler (I prefer IDA).
 
-![]()
+![](img/ida1.png)
 
 Ok, so `loop` is the most interesting function to look at.  Notice `cs:moves` is a global variable containing the current count of moves remaining.  Once `cs:moves` reaches zero, the loop exits (causing the program to exit as well).
 
@@ -115,7 +115,7 @@ So, how about we just overwrite `cs:moves` with a new value!
 
 Since PIE is disabled, the memory location of `cs:moves` is hardcoded.
 
-![]()
+![](img/ida2.png)
 
 Let's make sure we store this value in our script, you can either manually enter in the address, or you can use pwntools to parse the ELF and retrieve it for you.
 
@@ -170,7 +170,7 @@ A common trick to getting the address of a libc function is to leak an address f
 
 Again, the GOT is hardcoded because PIE has been disabled for this binary:
 
-![]()
+![](img/ida3.png)
 
 You can either manually enter this address into your script or you can use pwntools to grab it for you.
 
