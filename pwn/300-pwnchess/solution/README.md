@@ -198,7 +198,7 @@ log.info('Libc base address: 0x%x' % libc.address)
 
 There are at least 2 different ways to pop a shell that I'm aware of:
 - Use the stack address to build a ROP chain that can perform a ret2libc
-- Use (one_gadget)[https://github.com/david942j/one_gadget] to overwrite the call to `exit`.
+- Use [one_gadget](https://github.com/david942j/one_gadget) to overwrite the call to `exit`.
 
 I have included an example of both implementations, but for the purpose of this writeup I will be showing how to use one_gadget.
 
