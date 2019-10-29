@@ -411,3 +411,7 @@ uid=1000(pwnchess) gid=1000(pwnchess) groups=1000(pwnchess)
 $ cat /app/flag.txt
 BSidesPDX{th3_0nlYY_w1nn1ng___m0v_1s__2_g3t_y0urs3lf_m0re_m0v3s_aka_ch34t_2_w1n!!}
 ```
+
+- [Python2 one_gadget implementation](solver_one_gadget_py2.py) (Based on the writeup)
+- [Python2 ropchain implementation](solver_ropchain_py2.py) (More portable)
+- [Python3 ropchain implementation](solver_ropchain_py3.py) (More portable)
