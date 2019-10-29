@@ -4,7 +4,7 @@ context.arch = 'amd64'
 
 FNAME = '../distFiles/pwnchess'
 
-HOST = 'pwnchess.bsidespdxctf.party'
+HOST = '127.0.0.1'
 PORT = '31337'
 
 DEBUG = False
