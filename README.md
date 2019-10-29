@@ -4,6 +4,16 @@
 
 BSidesPDX CTF 2019 is using the [bsides-ctf-framework](https://github.com/BSidesPDX/bsides-ctf-framework). See [TTimzen's blog post](https://www.tophertimzen.com/blog/BSidesPDXCTFFramework/) for a detailed explanation of the framework, motivations, and instructions for writing challenges.
 
+Challenge authors:
+- [aagallag](https://twitter.com/aagallag)
+- [fharding0](https://twitter.com/fharding0)
+- [0xdade](https://twitter.com/0xdade)
+- [fdcarl](https://twitter.com/fdcarl)
+- [0x1nd0](https://twitter.com/0x1nd0)
+- [MrDe4d](https://twitter.com/MrDe4d)
+- [wireglitch](https://twitter.com/wireglitch)
+
+
 ## Final Statistics
 
 The challenge ended with:
